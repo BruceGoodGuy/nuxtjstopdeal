@@ -1,0 +1,4 @@
+.categories li:hover{
+    background-color: #cecece;
+    cursor: pointer;
+}
