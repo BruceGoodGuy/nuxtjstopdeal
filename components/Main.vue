@@ -8,7 +8,12 @@
 </template>
 <script>
 import Food from '../components/Food';
+import { mapGetters, mapState } from "vuex";
 export default ({
-    
+    computed: mapState(["articles"]),
+    mounted: async function(){
+        await this.$store.dispatch("fetchArticles");
+        console.log(this.articles)
+    }
 })
 </script>
